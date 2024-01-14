@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins','san-serif';
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: white;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(newbackground.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+.container{
+    padding: 10px 10%;
+
+}
+nav{
+    display: flex;
+    position: relative;
+    top: 10px;
+    left: 800px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    position: relative;
+
+}
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header text{
+    margin-top: 20%;
+    font-size: 30px;
+    color: #ff004f;
+
+}
+.header text h1{
+    font-size: 60px;
+    margin:20px;
+    
+}
+.About{
+    padding: 20px;
+    justify-content: flex-start;
+
+}
+.About h1{
+    font-size: 50px;
+    color: grey;
+    
+}
+.About img{
+   width: 30%;
+   border-radius: 15px;    
+
+ position: relative;
+ left: 900px;
+ top: 50%;
+   
+}
+
+#Education{
+    padding: 30px 0;
+
+}
+.list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s,transform 0.5s;
+}
+.list div:hover{
+    background: red;
+    transform: translateY(10px);
+
+}
+#Skills{
+    padding: 50px 0;
+
+}
+.Skill-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.Skill-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s,transform 0.5s;
+}
+.Skill-list div:hover{
+    background: red;
+    transform: translateY(10px);
+
+}
+.Skill-list i{
+    font-size: 30px;
+    margin-bottom: 30px;
+
+}
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+
+}
+.contact-left p i{
+    color: red;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons i{
+    color: red;
+    font-size: 25px;
+    margin-right: 15px;
+
+}
+
+.contact-right form{
+    width: 100%;
+
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    border-radius: 6px;
+}
+form.btn2{
+    padding: 15px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+   width: 100%;
+   border-radius: 6px;
+   size: 15px;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+nav.fas{
+    display: none;
+}
+@media only screen and (max-width:600px){
+    #header {
+        background-image: url(newbackground.jpg);
+        .header text {
+            margin-top: 100%;
+            font-size: 16px;
+        }
+        .header text h1{
+            font-size: 30px;
+        }
+        nav.fas{
+            display: block;
+            font-size: 25px;
+
+        }
+        nav ul {
+            background: #ff004f;
+            position: fixed;
+            top: 0;
+            right: -200px;
+            width: 200px;
+            height: 100vh;
+            padding-top: 50px;
+            z-index: 2;
+            transition: 0.5s;
+
+        }
+        .nav ul li{
+            display: block;
+            margin: 25px;
+        }
+        nav ul .fas{
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            cursor: pointer;
+        }
+        }
+}
+#msg{
+    color:white;
+    margin-top: 50px;
+
+    display: block;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">   
+    <script src="https://kit.fontawesome.com/ed62637bef.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+        <h1>VISHWAJEET BHOSALE</h1>
+        <nav>
+            <ul id="sidemenu">
+
+                <li><a href="#header">Home</a></li>
+                <li><a href="#Education">Education</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark fas" onclick="closemenu()"></i>
+                
+            </ul>
+            <i class="fa-solid fa-bars fas" onclick="openmenu()"></i>
+            
+             </nav>
+        
+        <div class="header text">
+            <p>Student</p>
+        <h1>Hello,I'm Vishwajeet<br> from Pune</h1>
+        
+        </div>
+        <hr>
+    <section class="About">
+        <h1>About me</h1>
+        <p>Represented sports like Badminton , Rifle shooting and Athletics.<br>RDC NCC 2018 Jr Air force Wing Cadet.<br>Persuing Artificial Intelligence and Data Science from Dr.D.Y.Patil Institute of Engineering Management and Research,Akurdi,Pune.
+            <br>Vice President of Computer Society of India Club of DYPIEMR (CSI). </p>
+            <img src="myimage2.png">
+    </section>
+    <div id="Education">
+        <div class="container">
+            <h1 class="sub-title">My Education</h1>
+            <div class="list">
+                <div>
+                    <h2>10th Class</h2>
+                    <p>St.Josephs Boys High School ,Khadki,Pune</p>
+   
+                </div>
+                <div>
+                    <h2>12th Class</h2>
+                    <p>Vidya Bhavan School & Jr.College, Shivajinagar,Pune</p>
+                </div>
+                <div>
+                    <h2>Graduation</h2>
+                    <p>Currently Persuing Artificial Intelligence and Data Science from Dr.D.Y.Patil Institute of Engineering Management and Research,Akurdi,Pune.</p>
+                </div>
+               
+
+            </div>
+        </div>
+    </div>
+    <div id="Skills">
+        <div class="container">
+            <h1> My Skills</h1>
+            <div class="Skill-list">
+                <div>
+                    <i class="fa-brands fa-html5"></i>
+                    <h2>HTML</h2>
+                    <P>Medium Level</P>
+                </div>
+                <div>
+                    <i class="fa-brands fa-js"></i>
+                    <h2>Javascript</h2>
+                    <p>Medium Level</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>C++</h2>
+                    <p>Medium Level</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-python"></i>
+                    <h2>Python</h2>
+                    <p>Medium Level</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Data Science</h2>
+                    <p>Third Year Honors Subject</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-file"></i>
+                    <h2>Download CV</h2>
+                    <p>Click here to Download CV</p>
+                    <a href="mycv.pdf" download class="button">Download</a>
+                </div>
+               
+
+                         
+        </div>
+    </div>   
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left"> 
+                <h1>contact</h1>
+                
+                <p><i class="fa-regular fa-envelope"> </i>Vishwajeetb3365@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91-9096269216</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    
+                </div>
+              
+            </div>
+            
+
+            </a>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <input type="message" name="Message" placeholder="Your Message" required>
+                        <button type="Submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg">
+                        
+                    </span>
+                </div>
+
+                
+          
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright @Vishwajeet. Made with<i class="fa-regular fa-heart"></i> by Portfolio</p>
+    </div>
+</div>
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = '<https://script.google.com/macros/s/AKfycbyzom9LpkfhBOjDXW9qetYD8pSq9oXBrURtWFPzGuoosh3yi0JxBDGnZvkjbX_x8Bz7zQ/exec>'
+    const form = document.forms['submit-to-google-sheet']
+  const msg=document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+
+
+    
+</body>
+</html>
